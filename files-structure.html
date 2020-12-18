@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<title>CodeIgniter Admin Panel Files Structure</title>
+<style>
+html, body {
+    font-family: "Lato",sans-serif;
+    background: #F5F5F5;
+    font-size: 11pt;
+    height: 100%;
+    color: #444;
+    -webkit-font-smoothing: antialiased;
+}
+.main-content {
+	width: auto;
+    padding: 0 0 40px;
+}
+h1 {
+    font-size: 20pt;
+    margin-bottom: 8px;
+}
+p {
+    font-size: 1em;
+    line-height: 1.5em;
+    margin: 5px 0;
+}
+a {
+    color: #3daccc;
+    cursor: pointer;
+    text-decoration: none;
+}
+ol li {
+    margin-bottom: 5px;
+}
+.license-content {
+    width: 980px;
+    margin: auto;
+    position: relative;
+}
+.pro-head {
+    padding: 40px 0;
+}
+.thumb {
+    float: left;
+    margin-right: 10px;
+    border-radius: 6px;
+}
+.container {
+    margin-bottom: 20px;
+	padding: 30px;
+	background: #fff;
+    clear: left;
+}
+.container h2 {
+    font-size: 22pt;
+    color: #2e2e2e;
+    text-align: center;
+    margin: 20px 0;
+}
+ul.summary {
+    list-style: none;
+    padding: 0;
+    line-height: 1.2em;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    color: #515151;
+}
+ul.summary li {
+    padding-left: 40px;
+    margin-bottom: 7px;
+    position: relative;
+}
+ul.summary li:before {
+    content: "■";
+    font-family: Arial;
+    color: #1497cc;
+    font-size: 12pt;
+    position: absolute;
+    left: 10px;
+}
+.license-content ol {
+    padding-left: 20px;
+    counter-reset: item;
+    list-style: none;
+}
+.license-content ol {
+    padding-left: 0;
+    line-height: 1.4em;
+    font-size: 10pt;
+    margin-left: 0;
+}
+.license-content ol p {
+    margin: 0;
+    display: inline;
+    font-size: 10pt;
+}
+.terms > ol ol {
+    padding-left: 20px;
+}
+
+.terms {
+    padding-bottom: 0;
+}
+.terms h2 {
+    margin-bottom: 40px;
+}
+.terms>ol {
+    padding: 0;
+    list-style: none;
+}
+
+.terms>ol>li:nth-child(2n+1) {
+    background: #f9f9f9;
+}
+.terms>ol>li {
+    padding: 30px;
+    border-top: 1px solid #dedede;
+    margin: 0 -30px;
+}
+.terms ol li:before {
+    content: counters(item, ".") ". ";
+    counter-increment: item;
+}
+.terms ol li ul li:before {
+	content: "";
+	counter-increment: none;
+	list-style: circle;
+}
+</style>
+</head>
+<body>
+<div class="main-content">	
+<div class="license-content">	
+	<div class="pro-head">
+		<h1><a href="http://www.codexworld.com/scripts/codeigniter-admin-panel/">CodeIgniterAdminPro</a></h1>
+		<p class="summary">CodeIgniterAdminPro is a readymade web application that allows creating an administrative panel with CodeIgniter framework within minutes.</p>
+	</div>
+	<div class="container">
+		<h2>Files Structure</h2>
+<pre style="background:#f9f9f9;color:#080808">codeigniter<span style="color:#794938">/</span>
+├── application<span style="color:#794938">/</span>
+│   ├── config<span style="color:#794938">/</span>
+│   │   ├── autoload.php
+│   │   ├── config.php
+│   │   ├── routes.php
+│   ├── controllers<span style="color:#794938">/</span>
+│   │   ├── admin<span style="color:#794938">/</span>
+│   │   │   ├── Administrative.php
+│   │   │   ├── Manage_users.php
+│   │   │   ├── Manage_cms.php
+│   │   │   ├── Site_settings.php
+│   │   ├── Home.php
+│   ├── helpers<span style="color:#794938">/</span>
+│   │   ├── common_helper.php
+│   │   ├── upload_helper.php
+│   │   ├── user_email_helper.php
+│   ├── libraries<span style="color:#794938">/</span>
+│   │   ├── Admin_init_elements.php
+│   │   ├── Public_init_elements.php
+│   ├── models<span style="color:#794938">/</span>
+│   │   ├── Admin_user.php
+│   │   ├── User.php
+│   │   ├── Cms.php
+│   │   ├── Settings.php
+│   ├── views<span style="color:#794938">/</span>
+│   │   ├── admin<span style="color:#794938">/</span>
+│   │   │   │   ├── elements<span style="color:#794938">/</span>
+│   │   │   │   │   ├── head.php
+│   │   │   │   │   ├── header.php
+│   │   │   │   │   ├── navigation<span style="color:#794938">-</span>sidebar.php
+│   │   │   │   │   ├── footer.php
+│   │   │   │   ├── administrative<span style="color:#794938">/</span>
+│   │   │   │   │   ├── login.php
+│   │   │   │   │   ├── forgot<span style="color:#794938">-</span>password.php
+│   │   │   │   │   ├── reset<span style="color:#794938">-</span>password.php
+│   │   │   │   │   ├── dashboard.php
+│   │   │   │   │   ├── profile.php
+│   │   │   │   ├── manage_users<span style="color:#794938">/</span>
+│   │   │   │   │   ├── index.php
+│   │   │   │   │   ├── details.php
+│   │   │   │   │   ├── add<span style="color:#794938">-</span>edit.php
+│   │   │   │   ├── manage_cms<span style="color:#794938">/</span>
+│   │   │   │   │   ├── index.php
+│   │   │   │   │   ├── details.php
+│   │   │   │   │   ├── add<span style="color:#794938">-</span>edit.php
+│   │   │   │   ├── site_settings<span style="color:#794938">/</span>
+│   │   │   │   │   ├── edit.php
+│   │   │   ├── layout<span style="color:#794938">-</span>login.php
+│   │   │   ├── layout.php
+│   │   ├── elements<span style="color:#794938">/</span>
+│   │   │   ├── head.php
+│   │   │   ├── header.php
+│   │   │   ├── footer.php
+│   │   ├── home<span style="color:#794938">/</span>
+│   │   │   ├── index.php
+│   │   ├── layout.php
+├── assets<span style="color:#794938">/</span>
+│   ├── admin<span style="color:#794938">/</span>
+│   ├── bootstrap<span style="color:#794938">/</span>
+│   ├── css<span style="color:#794938">/</span>
+│   └── images<span style="color:#794938">/</span>
+└── uploads<span style="color:#794938">/</span>
+	└── profile_picture<span style="color:#794938">/</span>
+		└── thumb<span style="color:#794938">/</span>
+</pre>
+</div>
+	<div class="container terms">		
+		<h2>Files Details & Functionality</h2>
+		<ol>
+			<li><p><strong>application/config/</strong></p>
+				<ol>
+					<li><p><strong>application/config/autoload.php</strong></p>
+					<p>In this file, we've specified some mostly used libraries (database, session) and helpers (url, file, form, user_email, common) to loaded by default.</p>
+					</li>
+					<li><p><strong>application/config/config.php</strong></p>
+					Some basic configuration veriables are specified in this file. (base_url, public_url, upload_url, upload_path, db_hostname, db_username, db_password, and db_name)</p>
+					</li>
+					<li><p><strong>application/config/routes.php</strong></p>
+					In this file, we've defined default controller and some routing rules.</p>
+					</li>
+				</ol>
+			</li>
+			<li><p><strong>application/controllers/</strong></p>
+				<ol>
+					<li><p><strong>application/controllers/admin/Administrative.php</strong></p>
+						<p>This controller controls all the Admin Management functionalities. All methods of the Administrative class and their functionality are given below.</p>
+						<ul>
+							<li><strong>__construct():</strong> Loads the required library, model, and helper. Also, assign some variables for using in the other methods.</li>
+							<li><strong>index():</strong> Loads the right method based on the admin logged-in status.</li>
+							<li><strong>login():</strong> Admin account login.</li>
+							<li><strong>forgotPassword():</strong> Admin account forgot password.</li>
+							<li><strong>resetPassword():</strong> Admin account reset new password.</li>
+							<li><strong>logout():</strong> Logout admin from administrative panel.</li>
+							<li><strong>dashboard():</strong> Admin dashboard.</li>
+							<li><strong>profile():</strong> Admin account information update.</li>
+							<li><strong>oldpass_check():</strong> Validation callback function used to check the old password.</li>
+							<li><strong>email_check():</strong> Validation callback function used to check existing email.</li>
+							<li><strong>username_check():</strong> Validation callback function used to check existing username.</li>
+							<li><strong>forgot_email_check():</strong> Validation callback function used to check existing email on forgot password request.</li>
+							<li><strong>file_check():</strong> Validation callback function used to check file types.</li>
+						</ul>
+					</li>
+					<li><p><strong>application/controllers/admin/Manage_users.php</strong></p>
+						<p>This controller controls all the User Management functionalities. All methods of Manage_users class and their functionality are given below.</p>
+						<ul>	
+							<li><strong>__construct():</strong> Loads the required library, model, and helper. Also, assign some variables for using in the other methods.</li>
+							<li><strong>index():</strong> The users list with add, edit, delete, and details link.</li>
+							<li><strong>add():</strong> Add new user information.</li>
+							<li><strong>edit():</strong> Update user information.</li>
+							<li><strong>details():</strong> User profile details.</li>
+							<li><strong>delete():</strong> Delete user profile data.</li>
+							<li><strong>block():</strong> Update user account status to inactive.</li>
+							<li><strong>unblock():</strong> Update user account status to active.</li>
+							<li><strong>email_check():</strong> Validation callback function, used to check existing email.</li>
+							<li><strong>forgot_email_check():</strong> Validation callback function, used to check existing email on forgot password request.</li>
+							<li><strong>oldpass_check():</strong> Validation callback function, used to check old password.</li>
+							<li><strong>file_check():</strong> Validation callback function, used to check file types.</li>
+						</ul>
+					</li>
+					<li><p><strong>application/controllers/admin/Manage_cms.php</strong></p>
+						<p>This controller controls all the CMS Pages Management functionalities. All methods of Manage_cms class and their functionality are given below.</p>
+						<ul>
+							<li><strong>__construct():</strong> Loads the required library, model, and helper. Also, assign some variables for using in the other methods.</li>
+							<li><strong>index():</strong> The CMS pages list with add, edit, delete, and details link.</li>
+							<li><strong>add():</strong> Add new CMS page information.</li>
+							<li><strong>edit():</strong> Update CMS page content.</li>
+							<li><strong>details():</strong> CMS page details.</li>
+							<li><strong>delete():</strong> Delete page content.</li>
+							<li><strong>block():</strong> Update page status to inactive.</li>
+							<li><strong>unblock():</strong> Update page status to active.</li>
+							<li><strong>title_check():</strong> Validation callback function, used to check existing page title.</li>
+						</ul>
+					</li>
+					<li><p><strong>application/controllers/admin/Site_settings.php</strong></p>
+						<p>This controller controls all the Site Settings Management functionalities. All methods of Site_settings class and their functionality are given below.</p>
+						<ul>
+							<li><strong>__construct():</strong> Loads the required library, model, and helper. Also, assign some variables for using in the other methods.</li>
+							<li><strong>index():</strong> Point to the settings update method.</li>
+							<li><strong>edit():</strong> Update site settings.</li>
+						</ul>
+					</li>
+					<li><p><strong>application/controllers/Home.php</strong></p>
+						<p>This controller controls all the homepage management functionalities. All methods of Home class and their functionality are given below.</p>
+						<ul>
+							<li><strong>__construct():</strong> Loads the required library, model, and helper. Also, assign some variables for using the other methods.</li>
+							<li><strong>index():</strong> Loads homepage of the frontend.</li>
+						</ul>
+					</li>
+				</ol>
+			</li>
+			<li><p><strong>application/helpers/</strong></p>
+				<ol>
+					<li><p><strong>application/helpers/common_helper.php</strong></p>
+						<p>The Common helper is used to define some most used helper functions. This helper file contains the following functions.</p>
+						<ul>
+							<li><strong>excerpt():</strong> Creates excerpt of the large content.</li>
+						</ul>
+					</li>
+					<li><p><strong>application/helpers/upload_helper.php</strong></p>
+						<p>The Upload helper is used to upload the file and create the thumbnail of images. This helper file contains the following functions.</p>
+						<ul>
+							<li><strong>upload():</strong> Uploads file to the server and return the uploaded file information.</li>
+							<li><strong>create_thumb():</strong> Creates the thumbnail of the image file.</li>
+						</ul>
+					</li>
+					<li><p><strong>application/helpers/user_email_helper.php</strong></p>
+						<p>This helper file is used to send an email to the admin on reset password. This helper file contains the following functions.</p>
+						<ul>
+							<li><strong>forgotPassEmail():</strong> Send reset password link to the admin.</li>
+						</ul>
+					</li>
+				</ol>
+			</li>
+			<li><p><strong>application/libraries/</strong></p>
+				<ol>
+					<li><p><strong>application/libraries/Admin_init_elements.php</strong></p>
+						<p>Admin_init_elements class separates view by elements for admin panel. The following functions are used to create elements.</p>
+						<ul>
+							<li><strong>init_elements():</strong> Initialize the element functions.</li>
+							<li><strong>is_admin_loggedin():</strong> Check the admin login status.</li>
+							<li><strong>init_head():</strong> Load head element view.</li>
+							<li><strong>init_header():</strong> Load header element view.</li>
+							<li><strong>init_navigation():</strong> Load navigation panel element view.</li>
+							<li><strong>init_footer():</strong> Load footer element view.</li>
+						</ul>
+					</li>
+					<li><p><strong>application/libraries/Public_init_elements.php</strong></p>
+						<p>Public_init_elements class separates view by elements. The following functions are used to create elements.</p>
+						<ul>
+							<li><strong>init_elements():</strong> Initialize the element functions.</li>
+							<li><strong>init_head():</strong> Load head element view.</li>
+							<li><strong>init_header():</strong> Load header element view.</li>
+							<li><strong>init_footer():</strong> Load footer element view.</li>
+						</ul>
+					</li>
+				</ol>
+			</li>
+			<li><p><strong>application/models/</strong></p>
+				<ol>
+					<li><p><strong>application/models/Admin_user.php</strong></p>
+						<p>The Admin_user model controls all the database related works for admin, like fetch, insert, and update data to the database.</p>
+						<ul>
+							<li><strong>getRows():</strong> Fetch admin account data from the database based on the given conditions.</li>
+							<li><strong>insert():</strong> Insert admin account data to the database.</li>
+							<li><strong>update():</strong> Update admin account data to the database.</li>
+							<li><strong>status_update():</strong> Update admin account status.</li>
+							<li><strong>delete():</strong> Delete admin account from the database.</li>
+							<li><strong>fieldValueCheck():</strong> Check admin user data by fields and values.</li>
+							<li><strong>loginCheck():</strong> Existing admin user check.</li>
+						</ul>
+					</li>
+					<li><p><strong>application/models/User.php</strong></p>
+						<p>The User model controls all the database related works for users, like fetch, insert, and update data to the database.</p>
+						<ul>
+							<li><strong>getRows():</strong> Fetch user data from the database based on the given conditions.</li>
+							<li><strong>insert():</strong> Insert user data in the database.</li>
+							<li><strong>update():</strong> Update user data in the database.</li>
+							<li><strong>delete():</strong> Delete user account from the database.</li>
+						</ul>
+					</li>
+					<li><p><strong>application/models/Cms.php</strong></p>
+						<p>The Cms model controls all the database related works for cms pages, like fetch, insert, and update data to the database.</p>
+						<ul>
+							<li><strong>getRows():</strong> Fetch page data from the database based on the given conditions.</li>
+							<li><strong>insert():</strong> Insert page data in the database.</li>
+							<li><strong>update():</strong> Update page data in the database.</li>
+							<li><strong>delete():</strong> Delete page content from the database.</li>
+						</ul>
+					</li>
+					<li><p><strong>application/models/Settings.php</strong></p>
+						<p>The Settings model controls all the database related works for site settings, like fetch, insert, and update data to the database.</p>
+						<ul>
+							<li><strong>getRow():</strong> Fetch settings data from the database.</li>
+							<li><strong>update():</strong> Insert or Update site settings in the database.</li>
+						</ul>
+					</li>
+				</ol>
+			</li>
+			<li><p><strong>application/views/</strong></p>
+				<ol>
+					<li><p><strong>application/views/admin/layout.php</strong></p>
+						<p>This file is main application layout for the admin panel, it merges all the elements including the main dynamic content of the web page.</p>
+					</li>
+					<li><p><strong>application/views/admin/layout-login.php</strong></p>
+						<p>This file is the admin login layout, it merges all the elements including the main dynamic content of the webpage.</p>
+					</li>
+			
+					<li><p><strong>application/views/admin/elements/</p></strong>
+						<ol>
+							<li><p><strong>application/views/admin/elements/head.php</strong></p>
+								<p>The entire HTML content which will go under the &lt;<span style="color:#bf4f24">head</span>> tags is placed here.</p>
+							</li>
+							<li><p><strong>application/views/admin/elements/header.php</strong></p>
+								<p>The entire HTML content of header section is placed here.</p>
+							</li>
+							<li><p><strong>application/views/admin/elements/navigation-sidebar.php</strong></p>
+								<p>The entire HTML content of sidebar navigation section is placed here.</p>
+							</li>
+							<li><p><strong>application/views/admin/elements/footer.php</strong></p>
+								<p>The entire HTML content of footer section is placed here.</p>
+							</li>
+						</ol>
+					</li>
+					<li><p><strong>application/views/admin/administrative/</p></strong>
+						<ol>
+							<li><p><strong>application/views/admin/administrative/login.php</p></strong>
+								<p>This view contains admin login form HTML and loaded by the login() method of the Administrative controller.</p>
+							</li>
+							<li><p><strong>application/views/admin/administrative/forgot-password.php</p></strong>
+								<p>This view contains forgot password form HTML and loaded by the forgotPassword() method of the Administrative controller.</p>
+							</li>
+							<li><p><strong>application/views/admin/administrative/reset-password.php</p></strong>
+								<p>This view contains admin reset password form HTML and loaded by the resetPassword() method of the Administrative controller.</p>
+							</li>
+							<li><p><strong>application/views/admin/administrative/dashboard.php</p></strong>
+								<p>This view contains admin dashboard HTML and loaded by the dashboard() method of the Administrative controller.</p>
+							</li>
+							<li><p><strong>application/views/admin/administrative/profile.php</p></strong>
+								<p>This view contains admin profile edit form HTML and loaded by the profile() method of the Administrative controller.</p>
+							</li>
+						</ol>					
+					</li>
+					<li><p><strong>application/views/admin/manage_users/</p></strong>
+						<ol>
+							<li><p><strong>application/views/admin/manage_users/index.php</p></strong>
+								<p>This view contains users list HTML and loaded by the index() method of Manage_users controller.</p>
+							</li>
+							<li><p><strong>application/views/admin/manage_users/details.php</p></strong>
+								<p>This view contains user details HTML and loaded by the details() method of Manage_users controller.</p>
+							</li>
+							<li><p><strong>application/views/admin/manage_users/add-edit.php</p></strong>
+								<p>This view contains user add/edit form HTML and loaded by the add()/edit() methods of Manage_users controller.</p>
+							</li>
+						</ol>
+					</li>
+					<li><p><strong>application/views/admin/manage_cms/</p></strong>
+						<ol>
+							<li><p><strong>application/views/admin/manage_cms/index.php</p></strong>
+								<p>This view contains cms pages list HTML and loaded by the index() method of Manage_cms controller.</p>
+							</li>
+							<li><p><strong>application/views/admin/manage_cms/details.php</p></strong>
+								<p>This view contains cms page details HTML and loaded by the details() method of Manage_cms controller.</p>
+							</li>
+							<li><p><strong>application/views/admin/manage_cms/add-edit.php</p></strong>
+								<p>This view contains cms page add/edit form HTML and loaded by the add()/edit() methods of Manage_cms controller.</p>
+							</li>
+						</ol>
+					</li>
+					<li><p><strong>application/views/admin/site_settings/</p></strong>
+						<ol>
+							<li><p><strong>application/views/admin/site_settings/edit.php</p></strong>
+								<p>This view contains settings edit form HTML and loaded by the edit() methods of Site_settings controller.</p>
+							</li>
+						</ol>
+					</li>
+					<li><p><strong>application/views/layout.php</p></strong>
+						<p>This file is main application layout for front-end, it merges all the elements including the main dynamic content of the webpage.</p>
+					</li>
+					<li><p><strong>application/views/elements/</p></strong>
+						<ol>
+							<li><p><strong>application/views/elements/head.php</p></strong>
+								<p>The entire HTML content which will go under the &lt;<span style="color:#bf4f24">head</span>> tags is placed here.</p>
+							</li>
+							<li><p><strong>application/views/elements/header.php</p></strong>
+								<p>The entire HTML content of header section is placed here.</p>
+							</li>
+							<li><p><strong>application/views/elements/footer.php</p></strong>
+								<p>The entire HTML content of footer section is placed here.</p>
+							</li>
+						</ol>
+					</li>
+					<li><p><strong>application/views/home/</p></strong>
+						<ol>
+							<li><p><strong>application/views/home/index.php</p></strong>
+								<p>This view contains homepage HTML for the frontend.</p>
+							</li>
+						</ol>
+					</li>
+				</ol>
+			</li>
+			<li><p><strong>assets/</p></strong>
+				<ol>
+					<li><p><strong>assets/admin/</p></strong>
+						<p>This directory contains the CSS, JS, and Images files for admin panel.</p>
+					</li>
+					<li><p><strong>assets/bootstrap/</p></strong>
+						<p>All the required Bootstrap libraries are placed in this directory.</p>
+					</li>
+					<li><p><strong>assets/css/</p></strong>
+						<p>The stylesheet files are placed in this directory.</p>
+					</li>
+					<li><p><strong>assets/images/</p></strong>
+						<p>The image files are placed in this directory.</p>
+					</li>
+				</ol>
+			</li>	
+			<li><p><strong>uploads/<p></strong>
+				<ol>
+					<li><p><strong>uploads/profile_picture/</p></strong>
+						<p>User's profile picture are stored in this directory.</p>
+					</li>
+					<li><p><strong>uploads/profile_picture/thumb/</p></strong>
+						<p>The thumbnail of the user profile picture is stored in this directory.</p>
+					</li>
+				</ol>
+			</li>
+		</ol>
+	</div>
+</div>
+</div>
+</body>
+</html>

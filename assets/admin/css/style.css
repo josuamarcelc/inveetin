@@ -1,0 +1,10 @@
+.none{display: none;}
+.btn.pull-right{margin-bottom: 10px;}
+.statusMsg{font-size: 15px;margin-bottom: 10px;}
+.statusMsg.success{color: #34A853;}
+.statusMsg.error{color: #EA4335;}
+.statusMsg.error{color: #EA4335;}
+.help-block.error {color: #dd4b39;}
+.help-block.success {color: #00a65a;}
+.pagination .active{opacity: .5;}
+.action-links a{font-size: 16px;padding: 2px;}

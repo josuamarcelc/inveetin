@@ -1,0 +1,28 @@
+body{
+	padding-top: 56px;
+}
+header {
+	padding: 156px 0 100px;
+}
+
+section {
+	padding: 50px 0;
+}
+
+footer.footer {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+.fa-facebook, .fa-twitter, .fa-linkedin{
+    text-align: center;
+    width: 32px;
+}
+.fa-facebook::before {
+  content: url(../images/fb-icon.png);
+}
+.fa-twitter::before {
+  content: url(../images/tw-icon.png);
+}
+.fa-linkedin::before {
+  content: url(../images/in-icon.png);
+}
